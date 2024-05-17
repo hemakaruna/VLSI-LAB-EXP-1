@@ -142,7 +142,9 @@ Full Subtractor:
 8 bit Ripple carry adder :
 ![Screenshot (29)](https://github.com/hemakaruna/VLSI-LAB-EXP-1/assets/160728787/57de123f-f93a-4b1c-824c-663d52d5134a)
 
-
 RESULT:
+Thus the simulation and synthesis of logic gates,Adders and subtractors using vivado has been successfully executed and verified.
+
+
 Thus the simulation and synthesis of Logic Gates Adders and Subtractors using vivado has been successfully executed and verified.
 
