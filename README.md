@@ -41,11 +41,107 @@ Full Subtractor:
 
 VERILOG CODE:
 
-----Type Verilog Code
+Logic gates:
+```module logicgates(a,b,andgate,orgate,xorgate,nandgate,norgate,xnorgate,notgate);
+input a,b;
+output andgate,orgate,xorgate,nandgate,norgate,xnorgate,notgate;
+and(andgate,a,b);
+or(orgate,a,b);
+xor(xorgate,a,b);
+nand(nandgate,a,b);  
+nor(norgate,a,b);
+xnor(xnorgate,a,b);
+not(notgate,a);
+endmodule```
+
+
+Half Adder:
+```module ha(a,b,sum,carry);
+input a,b;
+output sum,carry;
+and g1(carry,a,b);
+xor g2(sum,a,b);
+endmodule```
+
+
+Full Adder:
+```module fulladder(a,b,c,sum,carry);
+input a,b,c;
+output sum,carry;
+wire w1,w2,w3;
+xor g1(w1,a,b);
+xor g2(sum,w1,c);
+and g3(w2,w1,c);
+and g4(w3,a,b);
+or g5(carry,w2,w3);
+endmodule```
+
+Half Subtractor:
+```module halfsubtractor(a,b,difference,borrow);
+input a,b;
+output difference,borrow;
+xor (difference,a,b);
+and (borrow,~a,b);
+endmodule```
+
+Full Subtractor:
+```module fullsubtractor (a,b,c,difference,borrow);
+input a,b,c;
+output difference,borrow;
+wire w1,w2,w3;
+xor g1(w1,a,b);
+xor g2(difference,w1,c);
+and g3(w2,~a,b);
+and g4(w3,w1,c);
+or g5(borrow,w3,w2);
+endmodule```
+
+
+8 bit Ripple carry adder :
+```module fa(a,b,c,sum,carry);
+input a,b,c;
+output sum,carry;
+assign sum=a^b^c;
+assign carry=(a&b)|(b&c)|(c&a);
+endmodule
+
+module rca(a,b,cin,sum,cout);
+input [7:0]a,b;
+input cin;
+output [7:0]sum;
+output cout;
+wire [7:1]w;
+fa f1(a[0],b[0],cin,sum[0],w[1]);
+fa f2(a[1],b[1],w[1],sum[1],w[2]);
+fa f3(a[2],b[2],w[2],sum[2],w[3]);
+fa f4(a[3],b[3],w[3],sum[3],w[4]);
+fa f5(a[4],b[4],w[4],sum[4],w[5]);
+fa f6(a[5],b[5],w[5],sum[5],w[6]);
+fa f7(a[6],b[6],w[6],sum[6],w[7]);
+fa f8(a[7],b[7],w[7],sum[7],cout);
+endmodule```
+
+
 
 OUTPUT:
+Logic Gates:
+![Screenshot (12)](https://github.com/hemakaruna/VLSI-LAB-EXP-1/assets/160728787/d78ae3b5-e152-4169-b7ce-7359ca859cb3)
 
------Place a Waveform Generated from Xilinx ISE
+Half Adder:
+![Screenshot (6)](https://github.com/hemakaruna/VLSI-LAB-EXP-1/assets/160728787/0c4b9df7-59d3-4699-87b7-38daeeadac43)
+
+Full Adder:
+![Screenshot (10)](https://github.com/hemakaruna/VLSI-LAB-EXP-1/assets/160728787/e56add17-16f6-41aa-a0a6-6eec8fb1cd6d)
+
+Half Subtractor:
+![Screenshot (8)](https://github.com/hemakaruna/VLSI-LAB-EXP-1/assets/160728787/dfa5f0a1-ccac-418b-890b-0e56530fb439)
+
+Full Subtractor:
+![Screenshot (11)](https://github.com/hemakaruna/VLSI-LAB-EXP-1/assets/160728787/65839cde-4358-4ab6-a311-07fbe49ad4cd)
+
+8 bit Ripple carry adder :
+![Screenshot (29)](https://github.com/hemakaruna/VLSI-LAB-EXP-1/assets/160728787/57de123f-f93a-4b1c-824c-663d52d5134a)
+
 
 RESULT:
 
