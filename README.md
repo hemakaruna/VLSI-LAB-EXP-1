@@ -2,9 +2,12 @@
  
 AIM: To simulate and synthesis Logic Gates,Adders and Subtractor using Xilinx ISE.
 
-APPARATUS REQUIRED: Xilinx 14.7 Spartan6 FPGA
+APPARATUS REQUIRED:
+
+Xilinx 14.7 Spartan6 FPGA
 
 PROCEDURE:
+
 STEP:1 Start the Xilinx navigator, Select and Name the New project.
 
 STEP:2 Select the device family, device, package and speed.
@@ -32,6 +35,7 @@ STEP:12 On the board, by giving required input, the LEDs starts to glow light, i
 Logic diagram:
 
 Logic Gates:
+
 ![image](https://github.com/navaneethans/VLSI-LAB-EXPERIMENTS/assets/6987778/ee17970c-3ac9-4603-881b-88e2825f41a4)
 
 VERILOG CODE:
@@ -50,6 +54,7 @@ not(notgate,a);
 endmodule
 ```
 OUTPUT:
+
 ![Screenshot (12)](https://github.com/hemakaruna/VLSI-LAB-EXP-1/assets/160728787/a2c1f67a-cdf5-4756-8e83-105c22fb7615)
 
 
@@ -68,6 +73,7 @@ xor g2(sum,a,b);
 endmodule
 ```
 OUTPUT:
+
 ![Screenshot (6)](https://github.com/hemakaruna/VLSI-LAB-EXP-1/assets/160728787/0c4b9df7-59d3-4699-87b7-38daeeadac43)
 
 Full adder:
@@ -75,6 +81,7 @@ Full adder:
 ![image](https://github.com/navaneethans/VLSI-LAB-EXPERIMENTS/assets/6987778/9bb3964c-438f-469d-a3de-c1cca6f323fb)
 
 Verilog Code:
+
 ```
 module fulladder(a,b,c,sum,carry);
 input a,b,c;
@@ -120,6 +127,7 @@ Full Subtractor:
 ![image](https://github.com/navaneethans/VLSI-LAB-EXPERIMENTS/assets/6987778/d66f874b-c1f2-44b3-a035-7149b56430c1)
 
 Verilog Code:
+
 ```
 module fullsubtractor (a,b,c,difference,borrow);
 input a,b,c;
@@ -168,6 +176,7 @@ fa f7(a[6],b[6],w[6],sum[6],w[7]);
 fa f8(a[7],b[7],w[7],sum[7],cout);
 endmodule
 ```
+
 OUTPUT:
 
 ![Screenshot (29)](https://github.com/hemakaruna/VLSI-LAB-EXP-1/assets/160728787/57de123f-f93a-4b1c-824c-663d52d5134a)
