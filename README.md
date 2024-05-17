@@ -4,45 +4,26 @@ AIM: To simulate and synthesis Logic Gates,Adders and Subtractor using Xilinx IS
 
 APPARATUS REQUIRED: Xilinx 14.7 Spartan6 FPGA
 
-PROCEDURE: STEP:1 Start the Xilinx navigator, Select and Name the New project. STEP:2 Select the device family, device, package and speed. STEP:3 Select new source in the New Project and select Verilog Module as the Source type. STEP:4 Type the File Name and Click Next and then finish button. Type the code and save it. STEP:5 Select the Behavioral Simulation in the Source Window and click the check syntax. STEP:6 Click the simulation to simulate the program and give the inputs and verify the outputs as per the truth table. STEP:7 Select the Implementation in the Sources Window and select the required file in the Processes Window. STEP:8 Select Check Syntax from the Synthesize XST Process. Double Click in the Floorplan Area/IO/Logic-Post Synthesis process in the User Constraints process group. UCF(User constraint File) is obtained. STEP:9 In the Design Object List Window, enter the pin location for each pin in the Loc column Select save from the File menu. STEP:10 Double click on the Implement Design and double click on the Generate Programming File to create a bitstream of the design.(.v) file is converted into .bit file here. STEP:12 Load the Bit file into the SPARTAN 6 FPGA STEP:11 On the board, by giving required input, the LEDs starts to glow light, indicating the output.
+PROCEDURE:
+STEP:1 Start the Xilinx navigator, Select and Name the New project.
+STEP:2 Select the device family, device, package and speed.
+STEP:3 Select new source in the New Project and select Verilog Module as the Source type. 
+STEP:4 Type the File Name and Click Next and then finish button. Type the code and save it.
+STEP:5 Select the Behavioral Simulation in the Source Window and click the check syntax. 
+STEP:6 Click the simulation to simulate the program and give the inputs and verify the outputs as per the truth table. 
+STEP:7 Select the Implementation in the Sources Window and select the required file in the Processes Window. 
+STEP:8 Select Check Syntax from the Synthesize XST Process. Double Click in the Floorplan Area/IO/Logic-Post Synthesis process in the User Constraints process group. UCF(User constraint File) is obtained. 
+STEP:9 In the Design Object List Window, enter the pin location for each pin in the Loc column Select save from the File menu. 
+STEP:10 Double click on the Implement Design and double click on the Generate Programming File to create a bitstream of the design.(.v) file is converted into .bit file here. 
+STEP:11 Load the Bit file into the SPARTAN 6 FPGA
+STEP:12 On the board, by giving required input, the LEDs starts to glow light, indicating the output.
 
 Logic Diagram :
 
 Logic Gates:
 ![image](https://github.com/navaneethans/VLSI-LAB-EXPERIMENTS/assets/6987778/ee17970c-3ac9-4603-881b-88e2825f41a4)
 
-
-Half Adder:
-
-![image](https://github.com/navaneethans/VLSI-LAB-EXPERIMENTS/assets/6987778/0e1ecb96-0c25-4556-832b-aeeedfdfe7b9)
-
-
-Full adder:
-
-![image](https://github.com/navaneethans/VLSI-LAB-EXPERIMENTS/assets/6987778/9bb3964c-438f-469d-a3de-c1cca6f323fb)
-
-
-Half Subtractor:
-
-![image](https://github.com/navaneethans/VLSI-LAB-EXPERIMENTS/assets/6987778/731470b7-eb4e-49f8-8bb7-2994052a7184)
-
-
-
-Full Subtractor:
-
-![image](https://github.com/navaneethans/VLSI-LAB-EXPERIMENTS/assets/6987778/d66f874b-c1f2-44b3-a035-7149b56430c1)
-
-
-
-8 Bit Ripple Carry Adder
-
-![image](https://github.com/navaneethans/VLSI-LAB-EXPERIMENTS/assets/6987778/7385a408-40a5-4203-8050-b72818622d79)
-
-
-
 VERILOG CODE:
-
-Logic gates:
 
 ```
 module logicgates(a,b,andgate,orgate,xorgate,nandgate,norgate,xnorgate,notgate);
@@ -57,10 +38,15 @@ xnor(xnorgate,a,b);
 not(notgate,a);
 endmodule
 ```
-
+OUTPUT:
+![Screenshot (12)](https://github.com/hemakaruna/VLSI-LAB-EXP-1/assets/160728787/a2c1f67a-cdf5-4756-8e83-105c22fb7615)
 
 
 Half Adder:
+
+![image](https://github.com/navaneethans/VLSI-LAB-EXPERIMENTS/assets/6987778/0e1ecb96-0c25-4556-832b-aeeedfdfe7b9)
+
+Verilog code:
 
 ```
 module ha(a,b,sum,carry);
@@ -70,10 +56,14 @@ and g1(carry,a,b);
 xor g2(sum,a,b);
 endmodule
 ```
+OUTPUT:
+![Screenshot (6)](https://github.com/hemakaruna/VLSI-LAB-EXP-1/assets/160728787/0c4b9df7-59d3-4699-87b7-38daeeadac43)
 
+Full adder:
 
-Full Adder:
+![image](https://github.com/navaneethans/VLSI-LAB-EXPERIMENTS/assets/6987778/9bb3964c-438f-469d-a3de-c1cca6f323fb)
 
+Verilog Code:
 ```
 module fulladder(a,b,c,sum,carry);
 input a,b,c;
@@ -86,8 +76,18 @@ and g4(w3,a,b);
 or g5(carry,w2,w3);
 endmodule
 ```
+OUTPUT:
+
+![Screenshot (10)](https://github.com/hemakaruna/VLSI-LAB-EXP-1/assets/160728787/e56add17-16f6-41aa-a0a6-6eec8fb1cd6d)
+
+
+
 
 Half Subtractor:
+
+![image](https://github.com/navaneethans/VLSI-LAB-EXPERIMENTS/assets/6987778/731470b7-eb4e-49f8-8bb7-2994052a7184)
+
+Verilog Code:
 
 ```
 module halfsubtractor(a,b,difference,borrow);
@@ -98,8 +98,17 @@ and (borrow,~a,b);
 endmodule
 ```
 
+OUTPUT:
+
+![Screenshot (11)](https://github.com/hemakaruna/VLSI-LAB-EXP-1/assets/160728787/65839cde-4358-4ab6-a311-07fbe49ad4cd)
+
+
+
 Full Subtractor:
 
+![image](https://github.com/navaneethans/VLSI-LAB-EXPERIMENTS/assets/6987778/d66f874b-c1f2-44b3-a035-7149b56430c1)
+
+Verilog Code:
 ```
 module fullsubtractor (a,b,c,difference,borrow);
 input a,b,c;
@@ -112,9 +121,17 @@ and g4(w3,w1,c);
 or g5(borrow,w3,w2);
 endmodule
 ```
+OUTPUT:
+
+![Screenshot (11)](https://github.com/hemakaruna/VLSI-LAB-EXP-1/assets/160728787/65839cde-4358-4ab6-a311-07fbe49ad4cd)
 
 
-8 bit Ripple carry adder :
+
+8 Bit Ripple Carry Adder
+
+![image](https://github.com/navaneethans/VLSI-LAB-EXPERIMENTS/assets/6987778/7385a408-40a5-4203-8050-b72818622d79)
+
+Verilog Code:
 
 ```
 module fa(a,b,c,sum,carry);
@@ -140,28 +157,11 @@ fa f7(a[6],b[6],w[6],sum[6],w[7]);
 fa f8(a[7],b[7],w[7],sum[7],cout);
 endmodule
 ```
-
-
-
 OUTPUT:
-Logic Gates:
-![Screenshot (12)](https://github.com/hemakaruna/VLSI-LAB-EXP-1/assets/160728787/a2c1f67a-cdf5-4756-8e83-105c22fb7615)
 
-
-Half Adder:
-![Screenshot (6)](https://github.com/hemakaruna/VLSI-LAB-EXP-1/assets/160728787/0c4b9df7-59d3-4699-87b7-38daeeadac43)
-
-Full Adder:
-![Screenshot (10)](https://github.com/hemakaruna/VLSI-LAB-EXP-1/assets/160728787/e56add17-16f6-41aa-a0a6-6eec8fb1cd6d)
-
-Half Subtractor:
-![Screenshot (8)](https://github.com/hemakaruna/VLSI-LAB-EXP-1/assets/160728787/dfa5f0a1-ccac-418b-890b-0e56530fb439)
-
-Full Subtractor:
-![Screenshot (11)](https://github.com/hemakaruna/VLSI-LAB-EXP-1/assets/160728787/65839cde-4358-4ab6-a311-07fbe49ad4cd)
-
-8 bit Ripple carry adder :
 ![Screenshot (29)](https://github.com/hemakaruna/VLSI-LAB-EXP-1/assets/160728787/57de123f-f93a-4b1c-824c-663d52d5134a)
+
+
 
 RESULT:
 Thus the simulation and synthesis of logic gates,Adders and subtractors using vivado has been successfully executed and verified.
