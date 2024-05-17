@@ -43,7 +43,8 @@ VERILOG CODE:
 
 Logic gates:
 
-```module logicgates(a,b,andgate,orgate,xorgate,nandgate,norgate,xnorgate,notgate);
+```
+module logicgates(a,b,andgate,orgate,xorgate,nandgate,norgate,xnorgate,notgate);
 input a,b;
 output andgate,orgate,xorgate,nandgate,norgate,xnorgate,notgate;
 and(andgate,a,b);
@@ -53,23 +54,27 @@ nand(nandgate,a,b);
 nor(norgate,a,b);
 xnor(xnorgate,a,b);
 not(notgate,a);
-endmodule```
+endmodule
+```
 
 
 
 Half Adder:
 
-```module ha(a,b,sum,carry);
+```
+module ha(a,b,sum,carry);
 input a,b;
 output sum,carry;
 and g1(carry,a,b);
 xor g2(sum,a,b);
-endmodule```
+endmodule
+```
 
 
 Full Adder:
 
-```module fulladder(a,b,c,sum,carry);
+```
+module fulladder(a,b,c,sum,carry);
 input a,b,c;
 output sum,carry;
 wire w1,w2,w3;
@@ -78,20 +83,24 @@ xor g2(sum,w1,c);
 and g3(w2,w1,c);
 and g4(w3,a,b);
 or g5(carry,w2,w3);
-endmodule```
+endmodule
+```
 
 Half Subtractor:
 
-```module halfsubtractor(a,b,difference,borrow);
+```
+module halfsubtractor(a,b,difference,borrow);
 input a,b;
 output difference,borrow;
 xor (difference,a,b);
 and (borrow,~a,b);
-endmodule```
+endmodule
+```
 
 Full Subtractor:
 
-```module fullsubtractor (a,b,c,difference,borrow);
+```
+module fullsubtractor (a,b,c,difference,borrow);
 input a,b,c;
 output difference,borrow;
 wire w1,w2,w3;
@@ -100,12 +109,14 @@ xor g2(difference,w1,c);
 and g3(w2,~a,b);
 and g4(w3,w1,c);
 or g5(borrow,w3,w2);
-endmodule```
+endmodule
+```
 
 
 8 bit Ripple carry adder :
 
-```module fa(a,b,c,sum,carry);
+```
+module fa(a,b,c,sum,carry);
 input a,b,c;
 output sum,carry;
 assign sum=a^b^c;
@@ -126,7 +137,8 @@ fa f5(a[4],b[4],w[4],sum[4],w[5]);
 fa f6(a[5],b[5],w[5],sum[5],w[6]);
 fa f7(a[6],b[6],w[6],sum[6],w[7]);
 fa f8(a[7],b[7],w[7],sum[7],cout);
-endmodule```
+endmodule
+```
 
 
 
