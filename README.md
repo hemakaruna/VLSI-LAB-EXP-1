@@ -146,5 +146,5 @@ RESULT:
 Thus the simulation and synthesis of logic gates,Adders and subtractors using vivado has been successfully executed and verified.
 
 
-Thus the simulation and synthesis of Logic Gates Adders and Subtractors using vivado has been successfully executed and verified.
+
 
