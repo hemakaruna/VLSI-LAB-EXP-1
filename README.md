@@ -42,6 +42,7 @@ Full Subtractor:
 VERILOG CODE:
 
 Logic gates:
+
 ```module logicgates(a,b,andgate,orgate,xorgate,nandgate,norgate,xnorgate,notgate);
 input a,b;
 output andgate,orgate,xorgate,nandgate,norgate,xnorgate,notgate;
@@ -55,7 +56,9 @@ not(notgate,a);
 endmodule```
 
 
+
 Half Adder:
+
 ```module ha(a,b,sum,carry);
 input a,b;
 output sum,carry;
@@ -65,6 +68,7 @@ endmodule```
 
 
 Full Adder:
+
 ```module fulladder(a,b,c,sum,carry);
 input a,b,c;
 output sum,carry;
@@ -77,6 +81,7 @@ or g5(carry,w2,w3);
 endmodule```
 
 Half Subtractor:
+
 ```module halfsubtractor(a,b,difference,borrow);
 input a,b;
 output difference,borrow;
@@ -85,6 +90,7 @@ and (borrow,~a,b);
 endmodule```
 
 Full Subtractor:
+
 ```module fullsubtractor (a,b,c,difference,borrow);
 input a,b,c;
 output difference,borrow;
@@ -98,6 +104,7 @@ endmodule```
 
 
 8 bit Ripple carry adder :
+
 ```module fa(a,b,c,sum,carry);
 input a,b,c;
 output sum,carry;
