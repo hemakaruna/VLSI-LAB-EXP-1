@@ -1,6 +1,4 @@
 # VLSI-LAB-EXPERIMENTS
-                                                                                       EXP-1:
-
  
 AIM: To simulate and synthesis Logic Gates,Adders and Subtractor using Xilinx ISE.
 
