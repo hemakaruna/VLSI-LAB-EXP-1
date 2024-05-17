@@ -144,4 +144,5 @@ Full Subtractor:
 
 
 RESULT:
+Thus the simulation and synthesis of Logic Gates Adders and Subtractors using vivado has been successfully executed and verified.
 
