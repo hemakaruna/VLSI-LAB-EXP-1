@@ -132,7 +132,8 @@ endmodule```
 
 OUTPUT:
 Logic Gates:
-![Screenshot (12)](https://github.com/hemakaruna/VLSI-LAB-EXP-1/assets/160728787/d78ae3b5-e152-4169-b7ce-7359ca859cb3)
+![Screenshot (12)](https://github.com/hemakaruna/VLSI-LAB-EXP-1/assets/160728787/a2c1f67a-cdf5-4756-8e83-105c22fb7615)
+
 
 Half Adder:
 ![Screenshot (6)](https://github.com/hemakaruna/VLSI-LAB-EXP-1/assets/160728787/0c4b9df7-59d3-4699-87b7-38daeeadac43)
