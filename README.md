@@ -18,7 +18,7 @@ STEP:10 Double click on the Implement Design and double click on the Generate Pr
 STEP:11 Load the Bit file into the SPARTAN 6 FPGA
 STEP:12 On the board, by giving required input, the LEDs starts to glow light, indicating the output.
 
-Logic Diagram :
+
 
 Logic Gates:
 ![image](https://github.com/navaneethans/VLSI-LAB-EXPERIMENTS/assets/6987778/ee17970c-3ac9-4603-881b-88e2825f41a4)
